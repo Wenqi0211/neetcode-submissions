@@ -1,0 +1,12 @@
+class Solution {
+    public int climbStairs(int n) {
+        int prev1 = 1;
+        int prev2 = 1;
+        for (int i = 0; i < n - 1; i++) {
+            int current = prev1 + prev2;
+            prev2 = prev1;
+            prev1 = current;
+        }
+        return prev1;
+    }
+}
